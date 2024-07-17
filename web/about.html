@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>about us page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+
+	background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(images/bg2.jpg);
+	background-size:cover;
+	overflow:hidden;
+        background-position: center;
+}
+nav{
+	width:130%;
+	display:flex;
+	align-items:center;
+	margin:20px auto;
+        word-spacing: 10px;
+}
+ul{
+	float:right;
+	margin-top:25px;
+	margin-left:220px;
+}
+ul li{
+	display:inline-block;
+}
+ul li a{
+	font-size:20px;
+        font-weight:bold;
+	text-decoration:none;
+	color:brown;
+	padding:5px 20px;
+	transition:0.6s ease;
+        background-color:lightgoldenrodyellow;
+}
+
+ul li a:hover{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+ul li.active a{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+.logo img{
+	float:left;
+	width:150px;
+	height:auto;
+	margin-left:140px;
+        border-radius:100px;
+}
+.logo img:hover{
+        transform:scale(1.1);
+
+}
+.container{
+	display:flex;
+	justify-content:center;
+	width:80%;
+	margin:25px auto;
+        
+}
+.hero-content{
+	flex:1;
+        margin-top:50px;
+        margin-left:200px;
+}
+.hero-content h2{
+	font-size:22px;
+	color:brown;
+        background-color: lightgoldenrodyellow;
+	text-transform:uppercase;
+        margin-top:0px;
+        padding:10px 6px ;
+        align-content:center;
+}
+.hero-content p{
+        padding:20px 20px ;
+	font-size:17px;
+	color:brown;
+        background-color: lightgoldenrodyellow;
+        word-spacing: 2px;
+        letter-spacing:2px;
+        
+}
+.hero-content button{
+	display:inline-block;
+	background-color:lightcoral;
+	color:#fff;
+	padding:5px 10px;
+	border-radius:5px;
+	font-size:20px;
+	border:none;
+	cursor:pointer;
+        align-items: center;
+}
+.hero-content button:hover{
+	background-color:red;
+	transform:scale(1.1);
+}
+.hero-image{
+	flex:2;
+        gap:30px;
+      	width:170px;
+        margin-top:50px;
+}
+.hero-image img{
+	width:55%;
+	height:55%;
+        margin-left:200px;
+	border-radius:10px;
+        margin-bottom:10px;
+        
+        
+}
+</style>
+</head>
+<body>
+<header>
+	<nav>
+	<div class="logo">
+		<img src="images/logo.jpg" alt="alt">
+	</div>
+	<ul>
+		<li><a href="home.html">HOME</a></li>
+		<li><a href="coffee.html">COFFEE</a></li>
+		<li class="active"><a href="about.html">ABOUT</a></li>
+		<li><a href="review.html">REVIEW</a></li>
+		<li><a href="findus.html">FIND US</a></li>
+        </ul>
+	</nav>
+</header>
+<div class="container">
+	<div class="hero-content">
+	<h2>another day, another cup of coffee!!</h2>
+        <p>A COFFELATE or cafe is an establishment that primarily serves various types of coffee, espresso, latte, and cappuccino. Our COFFELATE may serve also food such as sandwiches, muffins, fruit or pastries. The caffeine in coffee works by increasing the levels of certain chemicals in the brain, which leads to feelings of happiness and euphoria.          <b>Have A "FEEL GOOD" Coffee</b></p>
+	<button class="button">Read more</button>
+	</div>
+	<div class="hero-image">
+	<img src="images/img2.jpg" alt="alt">
+	</div>
+</div>
+</body>
+</html>

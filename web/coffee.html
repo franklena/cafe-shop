@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>coffee page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+
+	background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(images/img11.jpg);
+	background-size:cover;
+}
+nav{
+	width:100%;
+	display:flex;
+	align-items:center;
+	margin:20px auto;
+        word-spacing: 10px;
+}
+ul{
+	float:right;
+	margin-top:25px;
+	margin-left:220px;
+}
+ul li{
+	display:inline-block;
+}
+ul li a{
+	font-size:20px;
+        font-weight:bold;
+	text-decoration:none;
+	color:brown;
+	padding:5px 20px;
+	transition:0.6s ease;
+        background-color:lightgoldenrodyellow;
+}
+
+ul li a:hover{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+ul li.active a{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+.logo img{
+	float:left;
+	width:150px;
+	height:auto;
+	margin-left:140px;
+        border-radius:100px;
+}
+.logo img:hover{
+        transform:scale(1.1);
+
+}
+h1{
+    color:green;
+    margin:10px;
+}
+/*section heading*/
+.section-heading{
+     font-size:28px;
+     padding:10px 20px;
+     text-transform: uppercase;
+     margin:1rem 0 10px 0;
+     color:white;
+ }
+ /*menu list*/
+ .menu--list{
+     display:flex;
+     gap:45px;
+     flex-wrap:wrap;
+     margin-left:30px;
+ }
+ .menu--item{
+     width:130px;
+     display:flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     border:2px solid lightgoldenrodyellow;
+     padding:10px 13px;
+     border-radius:10px;
+     font-size:20px;
+     color:white;
+     transform: scale(1.1);
+ }
+ .menu--item img{
+     width:100%;
+ }
+ .menu--item img:hover{
+     transform: scale(1.1);
+ }
+.image-container{
+	display:flex;
+	justify-content:center;
+	flex-wrap:wrap;
+	gap:50px;
+	padding-top:20px;
+        
+}
+.image-container .image{
+	padding:15px;
+	background-color:lightgoldenrodyellow;
+	border:2px solid black;
+	width:350px;
+	border-radius:10px;
+}
+.image-container .image img{
+	height:270px;
+	width:100%;
+	margin-bottom:10px;
+}
+img{
+    border-radius: 10px;
+}
+.image-container .image img:hover{
+	transform:translateY(-10px);
+}
+.image-container .image h2{
+	text-align:center;
+	font-size:28px;
+        text-transform: capitalize;
+}
+.image-container .image input{
+	height:20px;
+	width:40px;
+        border:2px solid black;
+        border-radius:3px;
+        background-color: lightcyan;
+}
+.image-container .image button{
+	height:50px;
+	width:100px;
+	background-color:lightpink;
+        border-radius:3px;
+}
+.sidebar{
+    width:40%;
+    border-radius:5px;
+    background-color:white;
+    margin-left:425px;
+    padding:15px;
+    text-align:center;
+    margin-top:20px;
+    border:5px ridge pink;
+}
+.head{
+    background-color:lightgoldenrodyellow;
+    border-radius:3px;
+    height:50px;
+    margin-bottom:30px;
+    color:purple;
+    padding-top:5px;
+    align-items:center;
+    font-weight:bold;
+    font-size:30px;
+}
+p{
+    margin-top:5px;
+}
+.foot{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0px;
+    padding:10px 0px;
+    border-top:1px solid black;
+}
+form input{
+    width:60%;
+    padding:10px 50px;
+    border:3px solid black;
+    font-size:15px;
+}
+button{
+    padding:5px 15px;
+    background-color: lightblue;
+    color:black;
+    font-weight:bold;
+    letter-spacing: 1px;
+    text-transform:uppercase;
+}
+button:hover{
+    transform:scale(1.1);
+}
+#amount{
+    width:80px;
+    font-size:15px;
+    padding:8px 8px;
+    margin-right:10px;
+    text-align:center;
+}
+#show{
+    color:red;
+    font-size:20px;
+    
+}
+</style>
+</head>
+<body>
+<header>
+	<nav>
+	<div class="logo">
+		<img src="images/logo.jpg" alt="alt">
+	</div>
+	<ul>
+		<li><a href="home.html">HOME</a></li>
+		<li class="active"><a href="coffee.html">COFFEE</a></li>
+		<li><a href="about.html">ABOUT</a></li>
+		<li><a href="review.html">REVIEW</a></li>
+		<li><a href="findus.html">FIND US</a></li>
+	</ul>
+	</nav>
+</header>
+<h3 class="section-heading">MENU</h3>
+        <div class="menu--list">
+            <div class="menu--item">
+                <img src="images/affogato.jpg" alt="">
+                <h5>Affogato</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/brownie.jpg" alt="">
+                <h5>Brownies</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/cheesecake.jpg" alt="">
+                <h5>Cheese cake</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/mocha.jpg" alt="">
+                <h5>Iced Mocha</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/dalgona.jpg" alt="">
+                <h5>Dalgona</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/croissant.jpg" alt="">
+                <h5>Croissant</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/tiramisu.jpg" alt="">
+                <h5>Tiramisu</h5>
+            </div>
+             
+        </div>
+<h3 class="section-heading">Coffee items</h3>
+<div class="image-container">
+<div class="image">
+	<img src="images/croissant.jpg" alt="alt">
+	<h2>crunchy croissant<br>
+	Rs.160 &nbsp;
+	Qty<input type="number" id="num1" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+
+<div class="image">
+    <img src="images/cheesecake.jpg" alt="alt">
+	<h2>lotus biscoff cheesecake<br>
+	Rs.310 &nbsp;
+	Qty<input type="number" id="num2" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="images/dalgona.jpg" alt="alt">
+	<h2>dalgona coffee<br>
+	Rs.239 &nbsp;
+	Qty<input type="number" id="num3" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="images/affogato.jpg" alt="alt">
+	<h2>Italian affogato<br>
+	Rs.210 &nbsp;
+	Qty<input type="number" id="num4" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="images/brownie.jpg" alt="alt">
+	<h2>chocolate brownies<br>
+	Rs.100 &nbsp;
+	Qty<input type="number" id="num5" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="images/sandwich.jpg" alt="alt">
+	<h2>croissant cheese sandwich<br>
+	Rs.279 &nbsp;
+	Qty<input type="number" id="num6" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+<div class="image">
+	<img src="images/milkcake.jpg" alt="alt">
+	<h2>creamy milkcake<br>
+	Rs.250 &nbsp;
+	Qty<input type="number" id="num7" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+
+<div class="image">
+    <img src="images/mocha.jpg" alt="alt">
+	<h2>iced mocha<br>
+	Rs.190 &nbsp;
+	Qty<input type="number" id="num8" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="images/tresleches.jpg" alt="alt">
+	<h2>tres leches<br>
+	Rs.229 &nbsp;
+	Qty<input type="number" id="num9" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="images/redpasta.jpg" alt="alt">
+	<h2>red sauce pasta<br>
+	Rs.280 &nbsp;
+	Qty<input type="number" id="num10" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="images/tiramisu.jpg" alt="alt">
+	<h2>coffee tiramisu<br>
+	Rs.290 &nbsp;
+	Qty<input type="number" id="num11" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+
+<div class="image">
+	<img src="images/whitepasta.jpg" alt="alt">
+	<h2>white sauce pasta<br>
+	Rs.300 &nbsp;
+	Qty<input type="number" id="num12" min=1 max=100><br>
+	<button onclick="buy()">Add to cart</button> 
+	</h2>
+	</div>
+</div>
+
+    <div class="sidebar">
+        <div class="head"><p>My Shopping cart</p></div>
+        <form action="coffserv" onsubmit="return buy()" method="get">
+            <input type="text" name="name" class="field" placeholder="Your Name" id="name"><br><br>
+            <input type="text" name="contact" class="field" placeholder="Your Phone" id="contact" pattern="[0-9]{10}" onchange="validateCont()"><br><br>
+            <input type="text" name="address" class="field" placeholder="Your Address" id="address"><br><br>
+            <input type="text" name="amount" id="amount"><br><br>
+            <p id="show"></p>
+            <button type="submit" >total</button>&nbsp;&nbsp;
+            
+        </form>
+    </div>
+<script>
+function buy()
+{
+	
+	var p1=document.getElementById('num1').value;
+	var p2=document.getElementById('num2').value;
+	var p3=document.getElementById('num3').value;
+	var p4=document.getElementById('num4').value;
+	var p5=document.getElementById('num5').value;
+	var p6=document.getElementById('num6').value;
+        var p7=document.getElementById('num7').value;
+	var p8=document.getElementById('num8').value;
+	var p9=document.getElementById('num9').value;
+	var p10=document.getElementById('num10').value;
+	var p11=document.getElementById('num11').value;
+	var p12=document.getElementById('num12').value;
+	var tot=0;
+	
+	if(p1!=="" ){
+		tot+=parseInt(p1)*160;
+	}
+	if(p2!=="" ){
+		tot+=parseInt(p2)*310;
+	}
+	if(p3!=="" ){
+		tot+=parseInt(p3)*239;
+	}
+	if(p4!=="" ){
+		tot+=parseInt(p4)*210;
+	}
+	if(p5!=="" ){
+		tot+=parseInt(p5)*100;
+	}
+	if(p6!=="" ){
+		tot+=parseInt(p6)*279;
+	}
+        if(p7!=="" ){
+		tot+=parseInt(p7)*250;
+	}
+	if(p8!=="" ){
+		tot+=parseInt(p8)*190;
+	}
+	if(p9!=="" ){
+		tot+=parseInt(p9)*229;
+	}
+	if(p10!=="" ){
+		tot+=parseInt(p10)*280;
+	}
+	if(p11!=="" ){
+		tot+=parseInt(p11)*290;
+	}
+	if(p12!=="" ){
+		tot+=parseInt(p12)*300;
+	}
+        document.getElementById('amount').value=tot;
+        
+	var name=document.getElementById('name').value;
+        var cont=document.getElementById('contact').value;
+        var addr=document.getElementById('address').value;
+
+
+        if(name==="" || cont==="" || addr==="")
+	{
+		 document.getElementById('show').innerHTML="*please fill this field!!";
+		show.style="color:red;background-color:white;";
+                return false;
+	}
+        else{
+             document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+}      
+function validateCont()
+{
+            var cont=document.getElementById('contact');
+            if(!cont.validity.valid)
+            {
+                document.getElementById('show').innerHTML="*must contain 10 numbers";
+                show.style="color:red;background-color:white;";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        
+        }
+</script>
+</body>
+</html>

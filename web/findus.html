@@ -1,0 +1,307 @@
+ <!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>find us page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+
+	background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(images/bg3.jpg);
+	background-size:cover;
+	overflow:hidden;
+        background-position: center;
+}
+nav{
+	width:130%;
+	display:flex;
+	align-items:center;
+	margin:20px auto;
+        word-spacing: 10px;
+}
+ul{
+	float:right;
+	margin-top:25px;
+	margin-left:220px;
+}
+ul li{
+	display:inline-block;
+}
+ul li a{
+	font-size:20px;
+        font-weight:bold;
+	text-decoration:none;
+	color:brown;
+	padding:5px 20px;
+	transition:0.6s ease;
+        background-color:lightgoldenrodyellow;
+}
+
+ul li a:hover{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+ul li.active a{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+.logo img{
+	float:left;
+	width:150px;
+	height:auto;
+	margin-left:140px;
+        border-radius:100px;
+}
+h1{
+    color:red;
+    margin-top: 0px;
+}
+.logo img:hover{
+        transform:scale(1.1);
+
+}
+.container{
+        margin-top:0px;
+	position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:60%;
+	height:70%;
+	padding:20px 50px;
+        margin-left:240px;
+}
+.contact-box{
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+        border:4px solid lightgoldenrodyellow;
+	background-color:transparent;
+}
+.left{
+        margin-left:20px;
+        margin-top: 10px;
+        padding:10px 20px;
+        background-color:darkgoldenrod;
+        font-size:22px;
+        font-weight:bold;
+        float:left;
+        word-spacing:3px;
+}
+.right{
+	padding:20px 30px;
+        
+}
+input{
+    width:100%;
+}
+.field{
+	width:87%;
+	padding:7px 10px;
+	outline:none;
+	border:2px solid black;
+	background-color:rgba(230,230,230,0.6);
+	font-size:15px;
+        margin:3px;
+}
+.right input{
+	width:87%;
+	height:20px;
+}
+.field:hover{
+	background-color:rgba(0,0,0,0.3);
+}
+.field:focus{
+	background-color:#fff;
+	border:2px solid rgba(30,85,250,0.47);
+}
+.right textarea{
+	min-height:90px;
+}
+.btn{
+	width:100px;
+	padding:5px 5px;
+	font-size:15px;
+	cursor:pointer;
+	background-color:brown;
+	outline:none;
+	border:none;
+	color:whitesmoke;
+        border-radius:3px;
+}
+a{
+	text-decoration:none;
+	transition:.5s;
+	color:#fff;
+}
+.footer_info{
+	margin:0 auto;
+        width:70%;
+	display:flex;
+        background-color:transparent;
+	color:#fff;
+        border:4px solid antiquewhite;
+}
+.footer_info .footer_width{
+	padding:0px 80px;
+}
+.footer_info h2{
+	margin-bottom:20px;
+	font-size:30px;
+	text-decoration:underline;
+}
+.footer_info p{
+	font-size:20px;
+}
+.social-media{
+	margin-top:10px;
+	margin-bottom:5px;
+}
+.social-media ul{
+	display:flex;
+	margin-left:10px;
+}
+.social-media ul li a{
+	display:inline-block;
+	margin-right:10px;
+	margin-left:10px;
+	width:15px;
+	height:25px;
+	padding-top:5px;
+	padding-left:4px;
+	background-color:transparent;
+	border:2px solid white;
+	text-align:center;
+}
+.social-media img{
+        
+	height:100%;
+	width:190%;
+        margin-top:0px;
+}
+img:hover{
+    transform:scale(1.5);
+}
+#show{
+    color:red;
+        font-size:20px;
+
+}
+</style>
+</head>
+<body>
+<header>
+	<nav>
+	<div class="logo">
+		<img src="images/logo.jpg" alt="alt">
+	</div>
+	<ul>
+		<li><a href="home.html">HOME</a></li>
+		<li><a href="coffee.html">COFFEE</a></li>
+		<li><a href="about.html">ABOUT</a></li>
+		<li><a href="review.html">REVIEW</a></li>
+		<li class="active"><a href="findus.html">FIND US</a></li>
+	</ul>
+	</nav>
+</header>
+<div class="container">
+    <div class="contact-box">
+        <div class="left">
+            <p>We want to serve you and make your experience absolutely excellent. That's why it's important for us to hear from you. Please don't hesitate to contact us regarding any of the following and we promise we'll get back to you as soon as possible.!!</p> 
+            </div>
+		<div class="right">
+			<form action="findusserv" method="get" onsubmit="return validate()">
+			<input type="text" name="uname" class="field" placeholder="Your Name" id="uname" required>
+			<input type="email" name="email" class="field" placeholder="Your Email" id="email" onchange="mail()" required>
+                        <input type="text" name="contact" class="field" placeholder="Your Phone" id="contact" pattern="[0-9]{10}" onchange="validateCont()" required>
+                        <textarea class="field" name="message" placeholder="Message" id="message" required></textarea>
+			<p id="show"></p>
+			<button type="submit" class="btn" >Send</button>
+			</form>
+		</div>
+	</div>
+</div>
+<script>
+function validate()
+{
+
+var name=document.getElementById('uname').value;
+var email=document.getElementById('email').value;
+var cont=document.getElementById('contact').value;
+var msg=document.getElementById('message').value;
+
+    if(name==="" || email==="" || cont===""|| msg==="")
+	{
+		 document.getElementById('show').innerHTML="*please fill this field!!";
+		show.style="color:red;background-color:white;";
+                return false;
+	}
+    else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+}
+function validateCont()
+{
+            var cont=document.getElementById('contact');
+            if(!cont.validity.valid)
+            {
+                document.getElementById('show').innerHTML="*must contain 10 numbers";
+                show.style="color:red;background-color:white;";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        
+}
+function mail(){
+            var uemail=document.getElementById('email');
+            if(!uemail.validity.valid)
+            {
+                document.getElementById('show').innerHTML="email id must contain @";
+                show.style="color:red;background-color:white;";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        }
+</script>
+<footer>
+<div class="footer_info">
+	<div class="footer_width">
+		<h2>Find us here</h2>
+		<div class="social-media">
+		<ul>
+			<li><a href="#"><img src="images/fb.jpg" alt="alt"></a></li>
+			<li><a href="#"><img src="images/tw.jpg" alt="alt"></a></li>
+			<li><a href="#"><img src="images/ig.jpg" alt="alt"></a></li>
+		</ul>
+		</div>
+	</div>
+
+	<div class="footer_width">
+		<h2>Contact us</h2>
+		<p>+123 456 789<br>www.coffelate.com</p>
+	</div>
+
+	<div class="footer_width">
+		<h2>Localization</h2>
+		<p>23,Poes Garden,<br>Teynampet,<br>chennai 600086.</p>
+	</div>
+</div>
+</footer>
+</body>
+</html>

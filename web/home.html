@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>home page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+body{
+
+	background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(images/bg.jpg);
+	background-size:cover;
+	overflow:hidden;
+}
+nav{
+	width:130%;
+	display:flex;
+	align-items:center;
+	margin:20px auto;
+        word-spacing: 10px;
+}
+ul{
+	float:right;
+	margin-top:25px;
+	margin-left:150px;
+}
+ul li{
+	display:inline-block;
+}
+ul li a{
+	font-size:20px;
+        font-weight:bold;
+	text-decoration:none;
+	color:brown;
+	padding:5px 20px;
+	transition:0.6s ease;
+        background-color:lightgoldenrodyellow;
+}
+ul li a:hover{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+ul li.active a{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+.logo img{
+	float:left;
+	width:150px;
+	height:auto;
+	margin-left:80px;
+        border-radius:100px;
+}
+.logo img:hover{
+        transform:scale(1.1);
+
+}
+.main{
+	max-width:1200px;
+	margin:auto;
+}
+.title{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+        font-family:Brush Script MT,Script Std,Cursive;
+        
+}
+.title h1{
+	color:black;
+	font-size:120px;
+        letter-spacing:15px;
+        
+}
+.title p{
+	color:black;
+	font-size:30px;
+	text-align:center;
+        word-spacing:10px;
+        letter-spacing:5px;
+        background-color:lightgoldenrodyellow;
+}
+.button{
+	position:absolute;
+	top:85%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.btn{
+	border:2px solid black;
+	padding:10px 30px;
+	color:black;
+	text-decoration:none;
+	transition:0.6s ease;
+        background-color:lightgoldenrodyellow;
+	color:brown;
+        font-weight:bold;
+        font-family:cursive;
+}
+.btn:hover{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="main">
+    <nav>
+    <div class="logo">
+        <img src="images/logo.jpg" alt="alt"/>
+    </div>
+    <ul>
+	<li class="active"><a href="home.html">HOME</a></li>
+	<li><a href="coffee.html">COFFEE</a></li>
+	<li><a href="about.html">ABOUT</a></li>
+	<li><a href="review.html">REVIEW</a></li>
+        <li><a href="findus.html">FIND US</a></li>
+    </ul>
+    </nav>
+    </div>
+
+    <div class="title">
+	<h1>COFFELATE</h1>
+	<p><i>COFFEE IS ALWAYS A GOOD IDEA!!</i></p>
+    </div>
+
+    <div class="button">
+	<a href="coffee.html" class="btn">BUY NOW</a>
+    </div>
+</header>
+</body>
+</html>

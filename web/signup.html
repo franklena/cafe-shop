@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>sign up page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+
+	background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(images/img3.jpg)no-repeat;
+	background-size:cover;     
+}
+.logo img{
+	float:left;
+	width:150px;
+	height:auto;
+	margin-left:100px;
+        margin-top:25px;
+        border-radius:100px;
+}
+.logo img:hover{
+        transform:scale(1.1);
+
+}
+nav{
+    display:flex;
+    margin-left:570px;
+}
+h1{
+    font-size:70px;
+    margin-right:50px;
+    padding:10px;
+    
+    text-transform:uppercase;
+    color:lightgoldenrodyellow;
+}
+.main{
+    box-sizing:border-box;
+    border:5px solid lightgoldenrodyellow;
+    width:30%;
+    height:70%;
+}
+label{
+    color:white;
+    text-transform:lowercase;
+    padding:10px;
+    font-size:22px;
+    text-align:left;
+    
+}
+input{
+    color:white;
+    padding:5px 15px;
+    background-color:transparent;
+    border:3px ridge white;
+    border-radius:5px;
+    font-size:20px;
+}
+button{
+    padding:5px 10px;
+    color:black;
+    background-color:orange;
+    font-size:20px;
+}
+button:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+    
+}
+p{
+    color:red;
+    font-size:20px;
+    
+}
+</style>
+</head>
+    <body>
+        
+        <div class="logo">
+		<img src="images/logo.jpg" alt="alt">
+	</div>
+        <nav>
+            <h1>sign up</h1></nav>
+       
+        <center>
+        <div class="main">
+            <form action="signupserv" method="post" onsubmit="return validate()"><br>
+                <label>Name:</label><br>
+                <input type="text" id="newuname" name="newuname"><br><br>
+                <label>Password:</label><br>
+                <input type="password" id="newpwd" name="newpwd"><br><br>
+                <label>Confirm password:</label><br>
+                <input type="password" id="confirmpwd" name="confirmpwd"><br><br>
+                <label>Contact no.:</label><br>
+                <input type="text" id="phoneno" name="phoneno" onchange="validateCont()"><br><br>
+                <label>Email ID:</label><br>
+                <input type="email" id="emailid" name="emailid" onchange="mail()"><br><br>
+                <p id="show"></p>
+                <button type="submit" value="submit">submit</button><a href="index.html"></a><br><br><br>
+               
+            </form>  
+        </div>
+            </center>
+        
+<script>
+function validate(){
+var name=document.getElementById('newuname').value;
+var pwd=document.getElementById('newpwd').value;
+var cpwd=document.getElementById('confirmpwd').value;
+var phone=document.getElementById('phoneno').value;
+var email=document.getElementById('emailid').value;
+
+    if(name==="" || pwd==="" || cpwd===""|| email==="" ||phone==="")
+	{
+		 document.getElementById('show').innerHTML="*please fill this field!!";
+		show.style="color:red;background-color:white;";
+                return false;
+	}
+	
+	else{
+          
+             if(pwd===cpwd){
+             document.getElementById('show').innerHTML="SUCCESSFULLY REGISTERED";
+           show.style="color:green;background-color:white;";
+   
+              return true;
+             }
+       if(pwd!==cpwd){
+           document.getElementById('show').innerHTML="*password does not match";
+           show.style="color:red;background-color:white;";
+           return false;
+       }
+      
+        }
+        return true;
+	
+}
+function validateCont()
+{
+            var cont=document.getElementById('phoneno');
+            if(!cont.validity.valid)
+            {
+                document.getElementById('show').innerHTML="*must contain 10 numbers";
+                show.style="color:red;background-color:white;";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        
+}
+function mail(){
+            var uemail=document.getElementById('emailid');
+            if(!uemail.validity.valid)
+            {
+                document.getElementById('show').innerHTML="email id must contain @";
+                show.style="color:red;background-color:white;";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        }
+</script>    
+</body>
+</html>

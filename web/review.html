@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>review page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+
+	background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/img4.jpg);
+	background-size:cover;
+        overflow:hidden;
+}
+nav{
+	width:130%;
+	display:flex;
+	align-items:center;
+	margin:20px auto;
+        word-spacing: 10px;
+}
+ul{
+	float:right;
+	margin-top:25px;
+	margin-left:220px;
+}
+ul li{
+	display:inline-block;
+}
+ul li a{
+	font-size:20px;
+        font-weight:bold;
+	text-decoration:none;
+	color:brown;
+	padding:5px 20px;
+	transition:0.6s ease;
+        background-color:lightgoldenrodyellow;
+}
+
+ul li a:hover{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+ul li.active a{
+	background-color:brown;
+	color:lightgoldenrodyellow;
+}
+.logo img{
+	float:left;
+	width:150px;
+	height:auto;
+	margin-left:140px;
+        border-radius:100px;
+}
+.container{
+	display:flex;
+	justify-content:center;
+}
+.card{
+	height:300px;
+	margin:50px;
+	box-shadow:5px 5px 20px black;
+}
+img{
+	height:300px;
+	width:250px;
+	border-radius:3px;
+}
+img:hover{
+    transform:scale(1.1);
+}
+.intro{
+	height:180px;
+	width:250px;
+	position:absolute;
+	background:rgba(27,27,27, .5);
+	color:white;
+}
+h1{
+	margin:5px;
+	font-size:28px;
+}
+p{
+	font-size:20px;
+	margin:7px;
+        word-spacing:3px;
+}
+</style>
+</head>
+<body>
+<header>
+	<nav>
+	<div class="logo">
+            <img src="images/logo.jpg" alt="alt">
+	</div>
+	<ul>
+		<li><a href="home.html">HOME</a></li>
+		<li><a href="coffee.html">COFFEE</a></li>
+		<li><a href="about.html">ABOUT</a></li>
+		<li class="active"><a href="review.html">REVIEW</a></li>
+		<li><a href="findus.html">FIND US</a></li>
+	</ul>
+	</nav>
+</header>
+<div class="container">
+<div class="card">
+	<img src="images/r1.jpg" alt="alt">
+	<div class="intro">
+	<h1>Joshua J</h1>
+        <p>Excellent espresso, pastries, hot chocolate. This coffee and hot chocolates we had was so delicious. Good prices and cute atmosphere. The place was so cozy.</p>
+        </div>
+</div>
+
+<div class="card">
+	<img src="images/r2.jpg" alt="alt">
+	<div class="intro">
+	<h1>Alfreda Joe</h1>
+        <p>I ordered this coffee for special occasions, but we ended up having it almost everyday. It is smooth and aromatic, going to order again.</p>
+        </div>
+</div>
+
+<div class="card">
+	<img src="images/r3.jpg" alt="alt">
+	<div class="intro">
+	<h1>Hazel Ivy</h1>
+	<p>For me, This is the best of all flavored coffees that I've tried. It fills the whole room with the intense aroma of chocolate.</p>
+	</div>
+</div>
+    
+<div class="card">
+	<img src="images/r4.jpg" alt="alt">
+	<div class="intro">
+	<h1>Aadrik D Rohan</h1>
+        <p>Perfect coffee after dinner. Will most definitely be ordering more. Thanks for a great service 'the Love Of Coffee'</p>
+        </div>
+</div>
+</div>
+</body>
+</html>
